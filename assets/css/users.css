@@ -1,0 +1,26 @@
+.v-users .user-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+.v-users .user-form .form-group {
+    margin-bottom: 0;
+}
+
+.v-users .user-item {
+    cursor: pointer;
+}
+
+.v-users .user-item.editing {
+    background-color: var(--gray-50);
+}
+
+.v-users .user-item.editing td {
+    padding: 0.5rem;
+}
+
+.v-users .user-item.editing input {
+    margin: 0;
+}

@@ -1,0 +1,35 @@
+.v-tasks .task-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+.v-tasks .task-form .form-group {
+    margin-bottom: 0;
+}
+
+.v-tasks .task-item {
+    cursor: pointer;
+}
+
+.v-tasks .task-item.editing {
+    background-color: var(--gray-50);
+}
+
+.v-tasks .task-item.editing td {
+    padding: 0.5rem;
+}
+
+.v-tasks .task-item.editing input,
+.v-tasks .task-item.editing select {
+    margin: 0;
+}
+
+.v-tasks .task-done {
+    opacity: 0.6;
+}
+
+.v-tasks .task-done .task-title {
+    text-decoration: line-through;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/users.css">
+    <link rel="stylesheet" href="assets/css/tasks.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h1>Dashboard</h1>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#projects" class="nav-link" data-view="projects">Projects</a></li>
+                <li><a href="#users" class="nav-link" data-view="users">Users</a></li>
+                <li><a href="#tasks" class="nav-link" data-view="tasks">Tasks</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content" id="content">
+            <!-- Dynamic content will be rendered here -->
+        </main>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
+
+<!-- assets/css/base.css -->
+
+
+<!-- assets/css/projects.css -->
+
+
+<!-- assets/css/users.css -->
+
+
+<!-- assets/css/tasks.css -->
+
+
+
+
+
+
+
+
+<script id="tasks-js">
+// assets/js/tasks.js
+import { storage } from './storage.js';
+
+let tasks = [];
+let projects = [];
+let users = [];
+let mounted = false;
+let container = null;
+
+function generateId() {
+    return Date.now().toString() + Math.random().toString(36).substr(2, 9);
+}
+
+function showToast(message, type = 'success') {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+    document.getElementById('toast-container').appendChild(

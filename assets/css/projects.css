@@ -1,0 +1,27 @@
+.v-projects .project-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+.v-projects .project-form .form-group {
+    margin-bottom: 0;
+}
+
+.v-projects .project-item {
+    cursor: pointer;
+}
+
+.v-projects .project-item.editing {
+    background-color: var(--gray-50);
+}
+
+.v-projects .project-item.editing td {
+    padding: 0.5rem;
+}
+
+.v-projects .project-item.editing input,
+.v-projects .project-item.editing select {
+    margin: 0;
+}
